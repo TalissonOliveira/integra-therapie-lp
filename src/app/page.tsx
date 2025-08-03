@@ -3,5 +3,5 @@ export default function Home() {
     <div>
       <p>Integra Therapie</p>
     </div>
-  );
+  )
 }
