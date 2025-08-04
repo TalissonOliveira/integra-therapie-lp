@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { marcellus, montserrat, mynaruseFlareBook } from '@/fonts'
+import { Header } from '@/components/layout/header'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={`${marcellus.variable} ${montserrat.variable} ${mynaruseFlareBook.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
