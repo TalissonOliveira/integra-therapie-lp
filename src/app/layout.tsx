@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { marcellus, montserrat, mynaruseFlareBook } from '@/fonts'
 import { Header } from '@/components/layout/header'
+import { Footer } from '@/components/layout/footer'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
