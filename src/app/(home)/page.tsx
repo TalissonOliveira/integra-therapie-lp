@@ -4,6 +4,7 @@ import { CTASection } from './components/sections/CTA-section'
 import { HeroSection } from './components/sections/hero-section'
 import { ServicesSection } from './components/sections/services-section'
 import { TeamSection } from './components/sections/team-section'
+import { WhatsAppFab } from '@/components/whatsapp-fab'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <CTASection />
       <ContactSection />
+      <WhatsAppFab />
     </main>
   )
 }
