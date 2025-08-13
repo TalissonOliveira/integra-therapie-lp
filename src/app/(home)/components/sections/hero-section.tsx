@@ -14,6 +14,7 @@ export function HeroSection() {
 
   return (
     <section
+      id="inicio"
       className="bg-[url(/lp/images/backgrounds/hero-background.png)] h-screen w-full bg-cover bg-center bg-no-repeat flex items-center justify-center px-6"
       aria-labelledby="hero-title"
     >

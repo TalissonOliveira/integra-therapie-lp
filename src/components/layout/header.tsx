@@ -7,18 +7,20 @@ import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { NavigationMenu } from 'radix-ui'
 import { clsx } from 'clsx'
+import { StarIcon } from '../icons/star-icon'
 
 const navigationItems = [
-  { name: 'Início', href: '/' },
+  { name: 'Início', href: '#inicio' },
   { name: 'Sobre Nós', href: '#sobre' },
-  { name: 'Serviços', href: '#servicos' },
   { name: 'Equipe', href: '#equipe' },
+  { name: 'Serviços', href: '#servicos' },
   { name: 'Contato', href: '#contato' },
 ] as const
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('')
   const pathname = usePathname()
 
   useEffect(() => {
@@ -46,14 +48,40 @@ export function Header() {
     }
   }, [isMobileMenuOpen])
 
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]')
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id')
+            if (id) {
+              setActiveSection(id)
+            }
+          }
+        })
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -50% 0px',
+        threshold: 0,
+      }
+    )
+
+    sections.forEach(section => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <header
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          isScrolled
-            ? 'backdrop-blur-md shadow-md bg-primary-dark'
-            : 'bg-transparent'
+          isMobileMenuOpen
+            ? 'bg-accent'
+            : isScrolled
+              ? 'backdrop-blur-md shadow-md bg-primary-dark'
+              : 'bg-transparent'
         )}
       >
         <nav className="container mx-auto px-6 py-4">
@@ -74,7 +102,8 @@ export function Header() {
             <NavigationMenu.Root className="hidden lg:block">
               <NavigationMenu.List className="flex space-x-8">
                 {navigationItems.map(item => {
-                  const isActive = pathname === item.href
+                  const isActive = item.href === `#${activeSection}`
+
                   return (
                     <NavigationMenu.Item key={item.name}>
                       <NavigationMenu.Link asChild>
@@ -123,22 +152,22 @@ export function Header() {
         <div className="lg:hidden fixed inset-0 z-40 bg-accent pt-20">
           <div className="container mx-auto px-6 py-6">
             <nav>
-              <ul className="space-y-6">
+              <ul className="space-y-6 text-center">
                 {navigationItems.map(item => {
-                  const isActive = pathname === item.href
+                  const isActive = item.href === `#${activeSection}`
+
                   return (
-                    <li key={item.name}>
+                    <li key={item.name} className="">
                       <Link
                         href={item.href}
-                        className={clsx(
-                          'block py-4 px-6 text-xl font-sans rounded-lg',
-                          isActive
-                            ? 'text-primary-dark bg-primary/35'
-                            : 'text-primary-dark hover:text-primary-dark hover:bg-primary/35'
-                        )}
+                        className={
+                          'flex items-center justify-center gap-4 py-4 px-6 text-xl font-sans rounded-lg hover:bg-primary/35 transition-colors duration-300'
+                        }
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
+                        {isActive && <StarIcon />}
                         {item.name}
+                        {isActive && <StarIcon />}
                       </Link>
                     </li>
                   )
