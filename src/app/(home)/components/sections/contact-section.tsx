@@ -5,7 +5,7 @@ import { StarIcon } from '@/components/icons/star-icon'
 import { ClockIcon, MailIcon, MapPin, PhoneIcon } from 'lucide-react'
 
 const contactInfo = {
-  phones: ['(11) 98559-7144'],
+  phones: ['(11) 98559-7144', '(11) 5082-4645'],
   address: 'R. Barata Ribeiro, 380 - Bela Vista, São Paulo - SP',
   emails: ['clinicaintegratherapie@gmail.com'],
   hours: {

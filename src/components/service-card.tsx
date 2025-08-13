@@ -14,7 +14,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <div
       className={`
-        rounded-lg p-8
+        rounded-lg p-8 h-full
         ${
           service.isHighlighted
             ? 'bg-primary text-white'

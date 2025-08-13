@@ -7,9 +7,9 @@ const teamData = [
   {
     id: 1,
     name: 'Waltraud Piana',
-    specialty: 'Endodontista',
+    specialty: 'Endodontista e Especialista em Harmonização Orofacial',
     image: '/lp/images/team/professional-1.png',
-    alt: 'Waltraud Piana - Especialista em Endodontia',
+    alt: 'Waltraud Piana - Especialista em Endodontia e Harmonização Orofacial',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const teamData = [
   {
     id: 3,
     name: 'Julia Lourenço',
-    specialty: 'Enfermagem Estética',
+    specialty: 'Enfermeira Esteta',
     image: '/lp/images/team/professional-3.png',
     alt: 'Julia Lourenço - Enfermeira Esteta',
   },
@@ -29,14 +29,15 @@ const teamData = [
     id: 4,
     name: 'Dr. Alexandre Santana Hilel',
     specialty:
-      'Clínica Médica, Cardiologia, Medicina do Esporte e Prática Ortomolecular',
+      'Médico Clínico com especialização em Cardiologia, Medicina do Esporte, Prática Ortomolecular e Medicina Canábica. Doutorado em Dor, Inflamação e Agravos Crônicos.',
     image: '/lp/images/team/professional-4.png',
-    alt: 'Dr. Alexandre Santana Hilel - Especialista médico',
+    alt: 'Dr. Alexandre Santana Hilel - Especialista em Clínica Médica, Cardiologia, Medicina do Esporte e Medicina Canábica',
   },
   {
     id: 5,
     name: 'Dr. Heloi Jose Stefani',
-    specialty: 'Médico de Família, Clínico Geral e Cirurgião Dermatológico',
+    specialty:
+      'Médico de Família, Clínico Geral, Cirurgião Dermatológico e especialista em Medicina Canábica.',
     image: '/lp/images/team/professional-5.png',
     alt: 'Dr. Heloi Jose Stefani - Especialista médico',
   },

@@ -4,6 +4,7 @@ import Link from 'next/link'
 const companyLinks = [
   { name: 'Início', href: '/' },
   { name: 'Sobre Nós', href: '#sobre' },
+  { name: 'Nossa Missão', href: '#sobre' },
   { name: 'Serviços', href: '#servicos' },
   { name: 'Nosso Time', href: '#equipe' },
   { name: 'Contato', href: '#contato' },
@@ -15,6 +16,7 @@ const servicesLinks = [
   { name: 'Medicina Canábica', href: '#servicos' },
   { name: 'Harmonização Facial', href: '#servicos' },
   { name: 'Medicina do Esporte', href: '#servicos' },
+  { name: 'Psicanálise', href: '#servicos' },
 ]
 
 const socialLinks = [

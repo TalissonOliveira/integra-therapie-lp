@@ -39,6 +39,13 @@ const servicesData = [
       'Avaliação, prevenção e tratamento de lesões, além de orientações para otimizar desempenho e saúde física de atletas e praticantes.',
     isHighlighted: false,
   },
+  {
+    id: 'psicanalise',
+    title: 'Psicanálise',
+    description:
+      'Método terapêutico que acessa o inconsciente para aliviar sintomas, promover autoconhecimento e ampliar o bem-estar.',
+    isHighlighted: false,
+  },
 ]
 
 export function ServicesSection() {
@@ -66,7 +73,7 @@ export function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
-          {servicesData.slice(0, 5).map(service => (
+          {servicesData.map(service => (
             <div key={service.id}>
               <ServiceCard service={service} />
             </div>
