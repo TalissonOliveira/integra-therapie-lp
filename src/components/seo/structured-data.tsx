@@ -1,5 +1,8 @@
 /** biome-ignore-all lint/security/noDangerouslySetInnerHtml: <explanation> */
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
+
+import { baseUrl } from '@/app/sitemap'
+
 export function StructuredData() {
   const medicalOrganization = {
     '@context': 'https://schema.org',
@@ -8,16 +11,16 @@ export function StructuredData() {
     alternateName: 'Integra Therapie - Medicina Integrativa',
     description:
       'Clínica especializada em medicina integrativa, canábica, ortomolecular, harmonização facial e terapias complementares em São Paulo',
-    url: 'https://integratherapie.com',
+    url: baseUrl,
     logo: {
       '@type': 'ImageObject',
-      url: 'https://integratherapie.com/lp/images/logo/logo.svg',
+      url: `${baseUrl}/lp/images/logo/logo.svg`,
       width: 362,
       height: 60,
     },
     image: [
-      'https://integratherapie.com/lp/images/about/image-1.jpeg',
-      'https://integratherapie.com/lp/images/about/image-2.jpeg',
+      `${baseUrl}/lp/images/about/image-1.jpeg`,
+      `${baseUrl}/lp/images/about/image-2.jpeg`,
     ],
     telephone: ['+55-11-98559-7144', '+55-11-5082-4645'],
     email: 'clinicaintegratherapie@gmail.com',
@@ -160,12 +163,12 @@ export function StructuredData() {
     '@type': 'LocalBusiness',
     name: 'Integra Therapie',
     image: [
-      'https://integratherapie.com/lp/images/about/image-1.jpeg',
-      'https://integratherapie.com/lp/images/about/image-2.jpeg',
+      `${baseUrl}/lp/images/about/image-1.jpeg`,
+      `${baseUrl}/lp/images/about/image-2.jpeg`,
     ],
     telephone: '+55-11-98559-7144',
     email: 'clinicaintegratherapie@gmail.com',
-    url: 'https://integratherapie.com',
+    url: baseUrl,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'R. Barata Ribeiro, 380',
