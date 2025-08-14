@@ -22,7 +22,7 @@ const servicesLinks = [
 const socialLinks = [
   {
     name: 'Facebook',
-    href: 'https://facebook.com/integratherapie',
+    href: 'https://facebook.com/61578097332275',
     icon: (
       <svg
         className="w-3.5 h-3.5"
