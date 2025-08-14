@@ -69,30 +69,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: baseUrl,
-    siteName: 'Integra Therapie',
-    title: 'Integra Therapie | Medicina Integrativa em São Paulo',
-    description:
-      'Medicina integrativa, canábica, ortomolecular e harmonização facial. Tratamentos personalizados na Bela Vista, São Paulo.',
-    images: [
-      {
-        url: '/og-integra-therapie.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Integra Therapie | Medicina Integrativa em São Paulo',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Integra Therapie | Medicina Integrativa em São Paulo',
-    description:
-      'Medicina integrativa, canábica e harmonização facial. Especialistas na Bela Vista, São Paulo.',
-    images: ['/twitter-integra.jpg'],
-  },
   category: 'healthcare',
 }
 
