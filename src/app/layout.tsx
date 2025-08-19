@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { marcellus, montserrat, mynaruseFlareBook } from '@/fonts'
 import { StructuredData } from '@/components/seo/structured-data'
+import { FacebookPixel } from '@/components/facebook-pixel'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { baseUrl } from './sitemap'
@@ -85,6 +86,7 @@ export default function RootLayout({
       <body
         className={`${marcellus.variable} ${montserrat.variable} ${mynaruseFlareBook.variable} antialiased`}
       >
+        <FacebookPixel />
         <Header />
         {children}
         <Footer />
